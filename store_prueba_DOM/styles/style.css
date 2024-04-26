@@ -1,0 +1,281 @@
+body,
+html {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+
+/* Encabezado */
+
+header {
+    padding-top: 20px;
+    background-color: #ff3b3c;
+    height: 152px;
+}
+
+.search {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.search .form {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.search .form input {
+    height: 62px;
+    border-radius: 14px;
+    border: none;
+    width: 505px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.search .social ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.search .social ul li {
+    padding: 0 10px;
+}
+
+.nav {
+    padding: 10px 0;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li a {
+    color: white;
+    font-weight: 700;
+    text-align: left;
+    text-decoration: none;
+}
+
+.nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero section */
+
+section {
+    height: 340px;
+}
+
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    height: inherit;
+    min-height: inherit;
+}
+
+section#hero {
+    height: 340px;
+    background: url("../assets/hero_bg.png");
+    background-size: cover;
+    background-position: top center;
+}
+
+section#hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.title-container span {
+    display: block;
+    color: white;
+    font-weight: 700;
+}
+
+.title-container span:first-child {
+    font-size: 40px;
+}
+
+.title-container span:last-child {
+    font-size: 100px;
+    line-height: 80px;
+}
+
+/* Seccion principal */
+
+main {
+    padding: 50px;
+    height: auto;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.product-container a {
+    text-decoration: none;
+    color: initial;
+}
+
+.product-card {
+    background-color: #F0F0F0;
+    border-radius: 14px;
+    width: auto;
+    overflow: hidden;
+}
+
+.product-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.product-info {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.product-title {
+    font-size: large;
+    font-weight: bold;
+    word-wrap: break-word;
+    display: block;
+    line-height: 22px;
+}
+
+.product-description {
+    font-size: small;
+    font-weight: normal;
+    margin-bottom: 6px;
+}
+
+.product-tax-policy {
+    font-size: medium;
+    font-weight: lighter;
+}
+
+.product-price-block {
+    display: flex;
+    margin: 5px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-price-block .price {
+    font-size: 22px;
+    font-weight: 700;
+    flex: 1;
+}
+
+.product-price-block .discount {
+    font-size: 12px;
+    font-weight: 700;
+    color: #428f13;
+}
+
+/* footer styles */
+
+footer {
+    /* Hexadecimal color code*/
+    background-color: #7525a7;
+}
+
+footer .container {
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+}
+
+.columns-container {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.columns-container .col ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.columns-container .col ul li {
+    padding: 5px 0;
+}
+
+.columns-container .col ul li.col-main-item {
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.columns-container .col ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.copyright {
+    border-top: 1px solid #ba53fb;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding: 30px 0;
+    box-sizing: border-box;
+}
+
+/* vista de tableta */
+
+@media (max-width: 768px) {
+    .search .form input {
+        width: 300px;
+    }
+
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer .container{
+        width: 500px;
+    }
+}
+
+/* vista de telefono */
+
+@media (max-width: 425px) {
+    .search .logo img {
+        width: 150px;
+    }
+
+    .search .form input {
+        width: 100px;
+    }
+
+    .title-container span:first-child {
+        font-size: 30px;
+    }
+
+    .title-container span:last-child {
+        font-size: 80px;
+        line-height: 80px;
+    }
+
+    .product-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    footer .container{
+        width: 230px;
+    }
+
+}
